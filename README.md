@@ -86,9 +86,7 @@ c. **Base de données** : Initialisez une base de données **Cloud Firestore** e
 d. **Configuration locale** : Utilisez la [CLI Firebase](https://firebase.google.com/docs/cli) pour générer automatiquement le fichier de configuration :
 
     ```bash
-
     flutterfire configure
-
     ```
 
     Cela mettra à jour votre fichier `lib/firebase_options.dart`.
