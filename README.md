@@ -63,17 +63,17 @@ helpdesk_app/
 
    cd helpdesk_app
 
-2. ** Installer les dépendances**
-
+2. **Installer les dépendances**
+  ```bash
       flutter pub get
+ ```
 
-### 🔧 Configuration Firebase
+3.**Configuration Firebase**
 
 
+a. **Créer un projet** : Rendez-vous sur la [Console Firebase](https://console.firebase.google.com/) et créez un nouveau projet.
 
-1. **Créer un projet** : Rendez-vous sur la [Console Firebase](https://console.firebase.google.com/) et créez un nouveau projet.
-
-2. **Activer l'Authentification** : Dans la section *Authentication*, activez les fournisseurs suivants :
+b. **Activer l'Authentification** : Dans la section *Authentication*, activez les fournisseurs suivants :
 
     * Email/Mot de passe
 
@@ -81,9 +81,9 @@ helpdesk_app/
 
     * GitHub
 
-3. **Base de données** : Initialisez une base de données **Cloud Firestore** en mode production ou test selon vos besoins.
+c. **Base de données** : Initialisez une base de données **Cloud Firestore** en mode production ou test selon vos besoins.
 
-4. **Configuration locale** : Utilisez la [CLI Firebase](https://firebase.google.com/docs/cli) pour générer automatiquement le fichier de configuration :
+d. **Configuration locale** : Utilisez la [CLI Firebase](https://firebase.google.com/docs/cli) pour générer automatiquement le fichier de configuration :
 
     ```bash
 
@@ -95,7 +95,7 @@ helpdesk_app/
 
 
 
-## Lancement de l'application
+4. **Lancement de l'application**
 
 
 
@@ -211,7 +211,7 @@ L'application offre une expérience complète adaptée à chaque profil d'utilis
 
 
 
-Ce projet a été réalisé avec passion par :
+Ce projet a été réalisé par :
 
 
 
