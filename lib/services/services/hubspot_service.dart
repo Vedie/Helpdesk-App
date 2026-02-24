@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 class HubSpotService {
   // 🔑 VOTRE TOKEN PERSONNEL (copié-collé depuis HubSpot)
-  static const String _accessToken = 'victorina';
+  static const String _accessToken = 'pat-eu1-fbfe4d1a-d590-40c9-b4d9-7494fed2346d';
   static const String _baseUrl = 'https://api.hubapi.com/crm/v3/objects/tickets';
 
   // 📋 Headers communs
