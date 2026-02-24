@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "327805065973",
+    "project_id": "ont-helpdesk",
+    "storage_bucket": "ont-helpdesk.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327805065973:android:9d88f23b053eac3f8ac3bc",
+        "android_client_info": {
+          "package_name": "com.example.helpdesk_ont"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327805065973-9c916uhlojnhmnsp6d3d98c7qmqiojr4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.helpdesk_ont",
+            "certificate_hash": "d2ab4891cb3451ab94534cc177c31c347256fffa"
+          }
+        },
+        {
+          "client_id": "327805065973-q2vicua8evaueihj3j510dpfed7a1a74.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgAtqTjPGLB6ctHxMfn6el1zMooCRQpjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327805065973-q2vicua8evaueihj3j510dpfed7a1a74.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "327805065973-4b6c1r7so4l46jfosprin1jl48bjc982.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.helpdeskOnt"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

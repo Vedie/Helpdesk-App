@@ -1,0 +1,12 @@
+# Launcher icons configuration for Flutter
+# Run: flutter pub run flutter_launcher_icons
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo_app.webp"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/logo_app.webp"
+  
+  # Remove old icons
+  remove_alpha_ios: true
