@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -31,7 +32,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
+              'you can reconfigure this by running the FlutterFire CLI again.',
         );
       default:
         throw UnsupportedError(
@@ -40,52 +41,51 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBJA43obML24mQx0K3Nfw_8MM-wzy2WAmM',
-    appId: '1:327805065973:web:7c8116d44f19f9f18ac3bc',
-    messagingSenderId: '327805065973',
-    projectId: 'ont-helpdesk',
-    authDomain: 'ont-helpdesk.firebaseapp.com',
-    storageBucket: 'ont-helpdesk.firebasestorage.app',
-    measurementId: 'G-H47FCEJR8F',
+  static FirebaseOptions get web => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_WEB'] ?? '',
+    appId: dotenv.env['FIREBASE_APP_ID_WEB'] ?? '',
+    messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID'] ?? '',
+    projectId: dotenv.env['FIREBASE_PROJECT_ID'] ?? '',
+    authDomain: dotenv.env['FIREBASE_AUTH_DOMAIN'] ?? '',
+    storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET'] ?? '',
+    measurementId: dotenv.env['FIREBASE_MEASUREMENT_ID_WEB'] ?? '',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAgAtqTjPGLB6ctHxMfn6el1zMooCRQpjQ',
-    appId: '1:327805065973:android:9d88f23b053eac3f8ac3bc',
-    messagingSenderId: '327805065973',
-    projectId: 'ont-helpdesk',
-    storageBucket: 'ont-helpdesk.firebasestorage.app',
+  static FirebaseOptions get android => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_ANDROID'] ?? '',
+    appId: dotenv.env['FIREBASE_APP_ID_ANDROID'] ?? '',
+    messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID'] ?? '',
+    projectId: dotenv.env['FIREBASE_PROJECT_ID'] ?? '',
+    storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET'] ?? '',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAj8DaSo8SBjEtV7uDtk7koiXqAGsTHrfM',
-    appId: '1:327805065973:ios:5560a8d61bf844358ac3bc',
-    messagingSenderId: '327805065973',
-    projectId: 'ont-helpdesk',
-    storageBucket: 'ont-helpdesk.firebasestorage.app',
-    iosClientId: '327805065973-4b6c1r7so4l46jfosprin1jl48bjc982.apps.googleusercontent.com',
-    iosBundleId: 'com.example.helpdeskOnt',
+  static FirebaseOptions get ios => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_IOS'] ?? '',
+    appId: dotenv.env['FIREBASE_APP_ID_IOS'] ?? '',
+    messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID'] ?? '',
+    projectId: dotenv.env['FIREBASE_PROJECT_ID'] ?? '',
+    storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET'] ?? '',
+    iosClientId: dotenv.env['FIREBASE_IOS_CLIENT_ID'] ?? '',
+    iosBundleId: dotenv.env['FIREBASE_IOS_BUNDLE_ID'] ?? '',
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAj8DaSo8SBjEtV7uDtk7koiXqAGsTHrfM',
-    appId: '1:327805065973:ios:5560a8d61bf844358ac3bc',
-    messagingSenderId: '327805065973',
-    projectId: 'ont-helpdesk',
-    storageBucket: 'ont-helpdesk.firebasestorage.app',
-    iosClientId: '327805065973-4b6c1r7so4l46jfosprin1jl48bjc982.apps.googleusercontent.com',
-    iosBundleId: 'com.example.helpdeskOnt',
+  static FirebaseOptions get macos => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_MACOS'] ?? '',
+    appId: dotenv.env['FIREBASE_APP_ID_MACOS'] ?? '',
+    messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID'] ?? '',
+    projectId: dotenv.env['FIREBASE_PROJECT_ID'] ?? '',
+    storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET'] ?? '',
+    iosClientId: dotenv.env['FIREBASE_IOS_CLIENT_ID'] ?? '',
+    iosBundleId: dotenv.env['FIREBASE_IOS_BUNDLE_ID'] ?? '',
   );
 
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBJA43obML24mQx0K3Nfw_8MM-wzy2WAmM',
-    appId: '1:327805065973:web:fe5e7631a8a7c8d28ac3bc',
-    messagingSenderId: '327805065973',
-    projectId: 'ont-helpdesk',
-    authDomain: 'ont-helpdesk.firebaseapp.com',
-    storageBucket: 'ont-helpdesk.firebasestorage.app',
-    measurementId: 'G-68CK0R8WLV',
+  static FirebaseOptions get windows => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_WINDOWS'] ?? '',
+    appId: dotenv.env['FIREBASE_APP_ID_WINDOWS'] ?? '',
+    messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID'] ?? '',
+    projectId: dotenv.env['FIREBASE_PROJECT_ID'] ?? '',
+    authDomain: dotenv.env['FIREBASE_AUTH_DOMAIN'] ?? '',
+    storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET'] ?? '',
+    measurementId: dotenv.env['FIREBASE_MEASUREMENT_ID_WINDOWS'] ?? '',
   );
-
 }
