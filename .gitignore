@@ -44,8 +44,10 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Fichiers d'environnement et clés API sensibles
+# Fichiers de configuration sensibles
 .env
-*.env
 .env.*
-!.env.example
+*.env
+
+# Configuration Firebase générée (si tu veux cacher le fichier d'options)
+lib/firebase_options.dart

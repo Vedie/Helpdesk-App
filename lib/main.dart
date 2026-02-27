@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart'; // 1. Import nécessaire
 import 'firebase_options.dart';
 import 'controllers/ticket_controller.dart';
 import 'controllers/auth_controller.dart';
@@ -13,13 +14,16 @@ import 'utils/app_colors.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 1. Initialisation de Firebase
+  // 2. Charger le fichier .env AVANT toute autre chose
+  // C'est ici que les clés API deviennent disponibles pour Firebase
+  await dotenv.load(fileName: ".env");
+
+  // 3. Initialisation de Firebase (utilise maintenant les clés du .env)
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // 2. Initialisation des Notifications (FCM)
-  // On ne l'active que sur mobile (iOS/Android) car la config est différente sur Web
+  // 4. Initialisation des Notifications (FCM)
   if (!kIsWeb) {
     await NotificationService.init();
   }
@@ -49,7 +53,7 @@ class HelpDeskApp extends StatelessWidget {
           ),
           fontFamily: 'Roboto',
         ),
-        // Logique de démarrage : Web pour Dashboard, Mobile pour Login
+        // Logique de démarrage
         home: kIsWeb ? const DashboardScreen() : const LoginScreen(),
       ),
     );
